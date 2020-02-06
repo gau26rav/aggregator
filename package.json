@@ -9,14 +9,14 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1",
-    "deploy": "curl -X POST -d {} https://api.netlify.com/build_hooks/5e3c5711a140e1b633ec5035"
+    "react-scripts": "3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "curl -X POST -d {} https://api.netlify.com/build_hooks/5e3c5711a140e1b633ec5035"
   },
   "eslintConfig": {
     "extends": "react-app"
