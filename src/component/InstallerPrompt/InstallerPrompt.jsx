@@ -4,10 +4,11 @@ class InstallerPrompt extends React.Component {
 
     state = { showPrompt: false }
     componentDidMount() {
+        console.log('Inside ')
         window.addEventListener('beforeinstallprompt', (event) => {
             this.deferredPrompt = event;
             console.log('Before Install event happened')
-            this.setState({showPrompt : false});
+            this.setState({showPrompt : true});
         });
     }
 
@@ -22,7 +23,7 @@ class InstallerPrompt extends React.Component {
         return (
             <>
                 {showPrompt && <div id="installer prompt">
-                    <p>Wanna see us at Home page</p>
+                    <h2>Wanna see us at Home page</h2>
                     <button onClick={this.handleClick}>Yes</button>
                     <button onClick={this.handleClick}>No</button>
                 </div>}
