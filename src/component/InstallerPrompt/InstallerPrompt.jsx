@@ -15,7 +15,6 @@ class InstallerPrompt extends React.Component {
     handleClick = (event) => {
         this.deferredPrompt.prompt();
         console.log('deferredPrompt invoked --> ' + event)
-        alert(event);
     }
 
     handleClose = () => {
