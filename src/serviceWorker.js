@@ -53,11 +53,6 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
-
-    window.addEventListener("beforeInstallPrompt", event => {
-      deferredPrompt = event;
-      console.log("Prompt enabled");
-    });
   }
 }
 
