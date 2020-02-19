@@ -6,11 +6,11 @@ import raspberry from './img/raspberries_blueberries_94014_1920x1200.jpg';
 import travelImg from './img/travel.jpg';
 import './styles/landing.css'
 
+
 function Landing() {
     return (
         <div>
             <h1> Landing page</h1>
-
             <div>
                 <Link to="/animals">
                     <div className="inner-container">

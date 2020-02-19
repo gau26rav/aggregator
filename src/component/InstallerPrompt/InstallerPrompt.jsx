@@ -7,12 +7,13 @@ class InstallerPrompt extends React.Component {
         window.addEventListener('beforeinstallprompt', (event) => {
             this.deferredPrompt = event;
             console.log('Before Install event happened')
+            this.setState({showPrompt : false});
         });
     }
 
     handleClick = (event) => {
         this.deferredPrompt.prompt();
-        console.log('deferredPrompt invoked')
+        console.log('deferredPrompt invoked --> ' + event)
     }
 
 
