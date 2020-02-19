@@ -27,10 +27,10 @@ class InstallerPrompt extends React.Component {
         return (
             <>
 
-                {showPrompt && <div id="myModal" class="modal">
-                    <div class="modal-content">
+                {showPrompt && <div id="myModal" >
+                    <div>
                         <span class="close" onClick={this.handleClose}>&times;</span>
-                        <p> <h2>Wanna see us at Home page</h2>
+                        <p> <h2>Wanna see us at Home page?</h2>
                             <button onClick={this.handleClick}>Yes</button>
                             <button onClick={this.handleClick}>No</button></p>
                     </div>
