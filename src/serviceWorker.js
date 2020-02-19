@@ -20,17 +20,6 @@ const isLocalhost = Boolean(
     )
 );
 
-var deferredPrompt;
-
-window.addEventListener("beforeInstallPrompt", event => {
-  deferredPrompt = event;
-  console.log("Prompt enabled");
-});
-
-export function getPrompt() {
-  return deferredPrompt;
-}
-
 export function register(config) {
   if (
     /* process.env.NODE_ENV === 'production' &&  */ "serviceWorker" in navigator

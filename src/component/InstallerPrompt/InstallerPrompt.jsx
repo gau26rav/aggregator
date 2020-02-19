@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './installer.css';
 class InstallerPrompt extends React.Component {
 
     state = { showPrompt: false }
@@ -18,16 +18,24 @@ class InstallerPrompt extends React.Component {
         alert(event);
     }
 
+    handleClose = () => {
+        this.setState({ showPrompt: false });
+    }
 
     render() {
         const { showPrompt } = this.state;
         return (
             <>
-                {showPrompt && <div id="installer prompt">
-                    <h2>Wanna see us at Home page</h2>
-                    <button onClick={this.handleClick}>Yes</button>
-                    <button onClick={this.handleClick}>No</button>
+
+                {showPrompt && <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onClick={this.handleClose}>&times;</span>
+                        <p> <h2>Wanna see us at Home page</h2>
+                            <button onClick={this.handleClick}>Yes</button>
+                            <button onClick={this.handleClick}>No</button></p>
+                    </div>
                 </div>}
+
             </>
         )
     }
