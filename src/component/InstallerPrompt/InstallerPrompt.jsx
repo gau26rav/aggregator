@@ -15,6 +15,7 @@ class InstallerPrompt extends React.Component {
     handleClick = (event) => {
         this.deferredPrompt.prompt();
         console.log('deferredPrompt invoked --> ' + event)
+        alert(event);
     }
 
 
@@ -22,6 +23,9 @@ class InstallerPrompt extends React.Component {
         const { showPrompt } = this.state;
         return (
             <>
+            <h2>Wanna see us at Home page</h2>
+                    <button onClick={this.handleClick}>Yes</button>
+                    <button onClick={this.handleClick}>No</button>
                 {showPrompt && <div id="installer prompt">
                     <h2>Wanna see us at Home page</h2>
                     <button onClick={this.handleClick}>Yes</button>
