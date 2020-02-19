@@ -9,7 +9,6 @@ if ("function" === typeof importScripts) {
 
     /* injection point for manifest files.  */
     workbox.precaching.precacheAndRoute([]);
-    workbox.setConfig({ debug: true });
 
     /* custom cache rules*/
     workbox.routing.registerNavigationRoute("/index.html", {
