@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-undef */
 if ("function" === typeof importScripts) {
   importScripts(
@@ -12,6 +13,9 @@ if ("function" === typeof importScripts) {
   /* global workbox */
   if (workbox) {
     console.log("Workbox is loaded");
+    self.addEventListener("install", event => {
+      self.skipWaiting();
+    });
 
     /* injection point for manifest files.  */
     workbox.precaching.precacheAndRoute([]);
