@@ -14,7 +14,8 @@ if ("function" === typeof importScripts) {
     workbox.routing.registerNavigationRoute("/index.html", {
       blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/]
     });
-
+    workbox.setConfig({ debug: true });
+    
     workbox.routing.registerRoute(
       /\.(?:png|gif|jpg|jpeg)$/,
       workbox.strategies.cacheFirst({
