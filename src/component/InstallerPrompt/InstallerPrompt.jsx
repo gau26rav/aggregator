@@ -2,11 +2,12 @@ import React from 'react'
 import './installer.css';
 class InstallerPrompt extends React.Component {
 
-    state = { showPrompt: false }
-    onPWA = this.isPWA();
-    
+    state = { showPrompt: false, isApp: false }
+
     componentDidMount() {
         console.log('Inside ');
+        const isApp = this.isPWA();
+        this.setState({ isApp });
         window.addEventListener('beforeinstallprompt', (event) => {
             event.preventDefault();
             this.deferredPrompt = event;
@@ -32,11 +33,11 @@ class InstallerPrompt extends React.Component {
     }
 
     render() {
-        const { showPrompt } = this.state;
+        const { showPrompt, isApp } = this.state;
         return (
             <>
 
-                {!this.onPWA && showPrompt && <div id="myModal" >
+                {!isApp && showPrompt && <div id="myModal" >
                     <div>
                         <span class="close" onClick={this.handleClose}>&times;</span>
                         <p> <h2>Wanna see us at Home page?</h2>
