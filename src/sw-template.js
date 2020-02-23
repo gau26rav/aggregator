@@ -1,8 +1,15 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-undef */
 if ("function" === typeof importScripts) {
   importScripts(
     "https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js"
   );
+
+  // eslint-disable-next-line no-restricted-globals
+  self.addEventListener('install', (event) => {
+    self.skipWaiting();
+
+  });
   /* global workbox */
   if (workbox) {
     console.log("Workbox is loaded");
