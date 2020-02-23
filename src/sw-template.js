@@ -4,7 +4,8 @@ if ("function" === typeof importScripts) {
     "https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js"
   );
   workbox.setConfig({ debug: true });
-  import {CacheFirst} from 'workbox-strategies';
+  const { CacheFirst } = workbox.strategies;
+
   /* global workbox */
   if (workbox) {
     console.log("Workbox is loaded");
@@ -19,7 +20,8 @@ if ("function" === typeof importScripts) {
 
     workbox.routing.registerRoute(
       /\.(?:png|gif|jpg|jpeg)$/,
-      workbox.strategies.cacheFirst({
+      /* workbox.strategies.cacheFirst({ */
+      CacheFirst({
         cacheName: "images",
         plugins: [
           new workbox.expiration.Plugin({
