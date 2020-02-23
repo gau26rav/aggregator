@@ -3,6 +3,7 @@ if ("function" === typeof importScripts) {
   importScripts(
     "https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js"
   );
+  workbox.setConfig({ debug: true });
   /* global workbox */
   if (workbox) {
     console.log("Workbox is loaded");
@@ -14,8 +15,7 @@ if ("function" === typeof importScripts) {
     workbox.routing.registerNavigationRoute("/index.html", {
       blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/]
     });
-    workbox.setConfig({ debug: true });
-    
+
     workbox.routing.registerRoute(
       /\.(?:png|gif|jpg|jpeg)$/,
       workbox.strategies.cacheFirst({
