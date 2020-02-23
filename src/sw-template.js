@@ -3,7 +3,10 @@ if ("function" === typeof importScripts) {
   importScripts(
     "https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js"
   );
+  // This will help to understand how is the workbox performing. it should be placed at the top before any other import happens.
   workbox.setConfig({ debug: true });
+
+  // This is one way to import the strategies to avoid reference error in the further cause.
   const { CacheFirst } = workbox.strategies;
 
   /* global workbox */
