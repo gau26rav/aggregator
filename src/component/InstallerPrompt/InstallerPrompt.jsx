@@ -3,14 +3,23 @@ import './installer.css';
 class InstallerPrompt extends React.Component {
 
     state = { showPrompt: false }
+    onPWA = this.isPWA();
+    
     componentDidMount() {
-        console.log('Inside ')
+        console.log('Inside ');
         window.addEventListener('beforeinstallprompt', (event) => {
             event.preventDefault();
             this.deferredPrompt = event;
             console.log('Before Install event happened')
             this.setState({ showPrompt: true });
         });
+    }
+
+    isPWA = () => {
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            console.log("This is running as standalone.");
+            return true;
+        } return false;
     }
 
     handleClick = (event) => {
@@ -27,7 +36,7 @@ class InstallerPrompt extends React.Component {
         return (
             <>
 
-                {showPrompt && <div id="myModal" >
+                {!this.onPWA && showPrompt && <div id="myModal" >
                     <div>
                         <span class="close" onClick={this.handleClose}>&times;</span>
                         <p> <h2>Wanna see us at Home page?</h2>
