@@ -17,6 +17,14 @@ if ("function" === typeof importScripts) {
       self.skipWaiting();
     });
 
+    self.addEventListener("push", event => {
+      const title = "Get Started With Workbox";
+      const options = {
+        body: event.data.text()
+      };
+      event.waitUntil(self.registration.showNotification(title, options));
+    });
+
     /* injection point for manifest files.  */
     workbox.precaching.precacheAndRoute([]);
 
