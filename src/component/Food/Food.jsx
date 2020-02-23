@@ -1,8 +1,10 @@
 import React from 'react'
+import BackBtn from '../Back/BackBtn'
 
 function Food() {
     return (
         <div>
+            <BackBtn/>
             <h1>Food Section</h1>
             <p>
                 Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.

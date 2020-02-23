@@ -1,8 +1,10 @@
 import React from 'react'
+import BackBtn from '../Back/BackBtn';
 
 function Employee() {
     return (
         <div className="emp-container">
+            <BackBtn/>
             <h1>Employee Segment</h1>
             <section>
                 <p>

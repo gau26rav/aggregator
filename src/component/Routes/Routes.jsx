@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Travel from '../Travel/Travel';
 import Arts from '../Arts/Arts';
 import Landing from '../Landing/Landing';
-import Animals from '../Animal/Animals';
 import Employee from '../Employee/Employee';
 import NotFound from '../NotFound/NotFound';
 import Food from '../Food/Food';

@@ -2,10 +2,12 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Hike from './Hike';
 import Beaches from './Beaches';
+import BackBtn from '../Back/BackBtn';
 
 function Travel(props) {
     return (
         <div id="travel-container">
+            <BackBtn/>
             <h1>Travel Container</h1>
             <Link to="/travel/hike">Hike</Link>
             <Link to="/travel/beaches">Beaches</Link>

@@ -1,0 +1,12 @@
+.back {
+  border: 2px solid brown;
+  margin: 11px;
+  height: 4%;
+  min-height: 18%;
+  text-align: left;
+}
+.backImg {
+  height: 20px;
+  width: 40px;
+  text-align: left;
+}

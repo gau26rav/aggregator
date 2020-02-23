@@ -1,8 +1,10 @@
 import React from 'react'
+import BackBtn from '../Back/BackBtn'
 
 function Arts() {
     return (
         <div>
+            <BackBtn/>
             <h1>Arts Container</h1>
             <section>
                 <p>Art is a diverse range of human activities in creating visual, auditory or performing artifacts (artworks),
