@@ -3,11 +3,13 @@ import "./App.css";
 import Landing from "./component/Landing/Landing";
 import Routes from "./component/Routes/Routes";
 import InstallerPrompt from "./component/InstallerPrompt/InstallerPrompt";
+import LanguageSelection from "./vernac/LanguageSelection";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <InstallerPrompt/>
+      <LanguageSelection />
+      <InstallerPrompt />
       <Routes />
     </div>
   );
