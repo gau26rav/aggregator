@@ -12,6 +12,9 @@ function Travel(props) {
             <Link to="/travel/hike">Hike</Link>
             <Link to="/travel/beaches">Beaches</Link>
             <div>
+                <video controls src="https://storage.googleapis.com/media-session/caminandes/short.mp4#t=101"></video>
+            </div>
+            <div>
                 <Route exact path="/travel/hike" component={Hike} />
                 <Route exact path="/travel/beaches" component={Beaches} />
             </div>
