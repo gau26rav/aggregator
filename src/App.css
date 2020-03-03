@@ -13,6 +13,11 @@
   }
 }
 
+video {
+  width: 96%;
+  padding: 1%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
