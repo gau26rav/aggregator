@@ -39,13 +39,13 @@ function Landing() {
                         <p>Visit the resort with </p>
                     </div>
                 </Link>
-                <NavLink to="/food">
+                {/* <NavLink to="/food">
                     <div className="inner-container">
                         <h3 onClick={printCaption}>Hungry kya?</h3>
                         <img src={raspberry} alt="Raspberries" />
                         <p></p>
                     </div>
-                </NavLink>
+                </NavLink> */}
             </div>
         </div >
     )
